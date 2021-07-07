@@ -43,7 +43,8 @@ function App() {
       </form>
 
       {result.map(book => (
-        <a target= "_blank" href={book.volumeInfo.previewLink}>
+        
+        <a target= "_blank"  rel="noreferrer" href={book.volumeInfo.previewLink} key={book.id}>
         <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title}/>
         </a>
       ))}
